@@ -12,6 +12,8 @@
 #ifndef GLIBF_H_
 #define GLIBF_H_
 
+#include <ft2build.h>
+#include FT_FREETYPE_H
 
 
 // error codes
@@ -23,17 +25,21 @@
 
 
 // definitions
+/*
 typedef struct {
-  FT_LIBRARY library;
-  FT_FACE face;
+  FT_Library library;
+  FT_Face face;
 } gfFont;
+*/
+
+typedef void *gfFont;
 
 // functions
 void gfSetFont(gfFont *font);
 void gfSetFontColor(g2dColor color);
 void gfSetFontAngle(double angle);
 int gfSetFontSize(int size);
-gfFont* gfLoadFont(char *filename);
+gfFont gfLoadFont(char *filename);
 void gfUnloadFont();
 void gfTextToScreen(char *text, int x, int y);
 void gfTextToImage(char *text, g2dTexture *image, int x, int y);

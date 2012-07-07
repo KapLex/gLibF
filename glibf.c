@@ -73,6 +73,8 @@ int gfSetFontSize(int size) {
 //		treat the return value as NULL on failure and non-NULL on
 //		success.
 gfFont gfLoadFont(char *filename) {
+	//gfFont *font = (gfFont*)malloc(sizeof(gfFont));
+
 	FT_Error error;
 	error = FT_Init_FreeType( &library );              /* initialize library */
   	if(error)
@@ -81,7 +83,10 @@ gfFont gfLoadFont(char *filename) {
 	if(error)
 		return 0;
 	FT_Set_Char_Size( face, 14 * 64, 0, 100, 0 );	// set default 14 point size
-	return (gfFont) 1;
+
+	//font->library = library;
+	//font->face = face;
+	return (gfFont)1;
 }
 
 
