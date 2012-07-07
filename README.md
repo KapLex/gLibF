@@ -10,7 +10,7 @@ gLibF is an update to flib, which used the graphics.c library. gLibF loads and r
 Installation
 ------------
 
-Read the INSTALL file in this directory.
+Read the INSTALL file in this directory for instructions.
 
 
 License
