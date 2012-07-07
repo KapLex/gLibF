@@ -1,4 +1,8 @@
 gLibF
 =====
 
-TrueType Font Library rendering compatiable with gLib2D
+TTF library compatible with gLib2D
+
+
+
+
